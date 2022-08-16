@@ -7,6 +7,7 @@ import { marketaux } from "../config/marketaux";
 import HeroSection from "../components/HeroSection";
 import Title from "../components/Title";
 import { IResponseData } from "../interface";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   const [news, setNews] = React.useState([]);
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
       <HeroSection handleSearchSubmit={handleSearchSubmit} />
       <Title />
       <Cards news={news} />
+      <Footer />
     </div>
   );
 };

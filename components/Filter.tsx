@@ -5,8 +5,6 @@ import { Button } from "./Button";
 export const Filter: FC<any> = ({ handleSearchSubmit }) => {
   const [searcValue, setSearchValue] = useState<string>("");
 
-  
-
   return (
     <form
       className={styles.filterWrapper}

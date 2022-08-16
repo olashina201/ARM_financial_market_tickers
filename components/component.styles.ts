@@ -128,7 +128,7 @@ const styles = {
     |--------------------------------------------------------------------------
     */
     titleSection: `h-auto bg-white`,
-    titleWrapper: `px-10 py-24 mx-auto max-w-7xl`,
+    titleWrapper: `px-5 py-24 mx-auto max-w-7xl`,
     titleContent: `w-full mx-auto text-center md:text-center`,
     titleHead: `mb-6 text-5xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-gray-900 sm:text-6xl md:text-6xl lg:text-7xl md:tracking-tight`,
     titleSpan: `w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline`,
