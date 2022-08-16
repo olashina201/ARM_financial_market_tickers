@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, FC } from "react";
 import styles from "./component.styles";
 import { Button } from "./Button";
 
-export const Filter = ({ handleSearchSubmit }) => {
+export const Filter: FC<any> = ({ handleSearchSubmit }) => {
   const [searcValue, setSearchValue] = useState<string>("");
 
   
