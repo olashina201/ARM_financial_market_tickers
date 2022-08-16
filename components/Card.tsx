@@ -1,13 +1,13 @@
 import React from "react";
 import { IResponseData } from "../interface";
-import { styles } from "../styles/cards.style";
+import styles from "./component.styles";
 
 type Props = {
   news: IResponseData;
 };
 
 export const Card: React.FC<Props> = ({ news }) => {
-  const { uuid, image_url, source, title, description, published_at, url } =
+  const { uuid, image_url, source, title, description, published_at, url, language } =
     news;
   return (
     <div className={styles.cardWrapper} key={uuid}>
@@ -22,8 +22,8 @@ export const Card: React.FC<Props> = ({ news }) => {
       </h2>
       <p className={styles.cardDescription}>{description}</p>
       <p className={styles.cardSmallText}>
-        <a href="#_" className={styles.cardAnchor}>
-          Mary Jane
+        <a href="" className={styles.cardAnchor}>
+          {language}
         </a>
         · <span className="mx-1">{published_at.slice(0, 10)}</span> ·{" "}
         <a href={url} target="_blank" className={styles.cardReadNow}>

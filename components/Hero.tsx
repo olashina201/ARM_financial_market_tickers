@@ -1,5 +1,5 @@
 import { HeroData } from "../data/textData";
-import { styles } from "../styles/cards.style";
+import styles from "./component.styles";
 import { Filter } from "./Filter";
 
 export const Hero = () => {

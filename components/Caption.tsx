@@ -1,15 +1,13 @@
 import React from "react";
-import { styles } from "../styles/cards.style";
+import { CAPTION_IMAGE_URL } from "../constant";
+import styles from "./component.styles";
 
 const Caption = () => {
   return (
     <div className={styles.captionWrapper}>
       <div className={styles.captionImgWrapper}>
         <a href="#_" className="block">
-          <img
-            className={styles.captionImage}
-            src="https://cdn.devdojo.com/images/may2021/cupcakes.jpg"
-          />
+          <img className={styles.captionImage} src={CAPTION_IMAGE_URL} />
         </a>
       </div>
       <div className={styles.captionContentWrapper}>
@@ -29,7 +27,7 @@ const Caption = () => {
             <a href="#_">Savory Templates. Sweet Designs.</a>
           </h1>
           <p className={styles.captionSmallText}>
-            by{" "}
+            by
             <a href="#_" className={styles.captionAnchor}>
               John Doe
             </a>{" "}

@@ -3,13 +3,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Cards } from "../components/Cards";
-import Navbar from "../components/Navbar";
-import { Hero } from "../components/Hero";
 import { marketaux } from "../config/marketaux";
+import HeroSection from "../components/HeroSection";
+import Title from "../components/Title";
+import { IResponseData } from "../interface";
 
 const Home: NextPage = () => {
   const [news, setNews] = React.useState([]);
-  const [search, setSearch] = React.useState("");
 
   const getNews = async () => {
     const response = await marketaux.get("/news/all");
@@ -17,13 +17,14 @@ const Home: NextPage = () => {
     console.log(news);
   };
 
-  const filterNews = async (filter: string) => {
-    const response = await marketaux.get(`/news/all?${filter}=${search}`);
-    setNews(response.data.data);
+  const handleSearchSubmit = async (filter: string) => {
+    const response =  news.filter((data: IResponseData) => data.keywords.includes(filter));
+    setNews(response);
+    console.log('new ', news)
   };
+
   React.useEffect(() => {
     getNews();
-    // filterNews('exchanges')
   }, []);
 
   return (
@@ -32,9 +33,8 @@ const Home: NextPage = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Navbar />
-      <Hero />
+      <HeroSection handleSearchSubmit={handleSearchSubmit} />
+      <Title />
       <Cards news={news} />
     </div>
   );

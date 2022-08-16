@@ -1,5 +1,5 @@
 import React from "react";
-import { styles } from "../styles/cards.style";
+import styles from "./component.styles";
 
 const Navbar = () => {
   return (

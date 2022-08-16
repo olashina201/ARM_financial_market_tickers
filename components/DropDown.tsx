@@ -1,8 +1,13 @@
 import React from "react";
 import { FilterList } from "../data/filterList";
-import { styles } from "../styles/cards.style";
+import styles from "./component.styles";
 
-const DropDown = () => {
+type ToggleProps = {
+  toggleFilter: boolean;
+  setToggleFilter: boolean;
+};
+
+const DropDown: React.FC<ToggleProps> = ({ toggleFilter, setToggleFilter }) => {
   return (
     <div
       className={styles.dropdownWrapper}

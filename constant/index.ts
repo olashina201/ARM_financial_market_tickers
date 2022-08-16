@@ -1,0 +1,1 @@
+export const CAPTION_IMAGE_URL = "https://images.unsplash.com/photo-1645226880663-81561dcab0ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&amp;fit=crop&amp;w=2700&amp;q=80";

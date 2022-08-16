@@ -1,1 +1,1 @@
-export const FilterList = ['uuid', 'exchanges', 'symbols', 'entity_types', 'industries', 'countries', 'sentiment_gte', 'sentiment_lte']
+export const FilterList = ['exchanges', 'symbols', 'entity_types', 'industries', 'countries', 'sentiment_gte', 'sentiment_lte']
