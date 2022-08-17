@@ -1,27 +1,57 @@
-# Next.js + Tailwind CSS Example
+## How long did you spend on the coding test?
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+About 24 hours
+## What would you add to your solution if you had more time? If you did not spend much time on the coding test.
+- Add pagination.
+- Add a filter component in the sidebar, so user can easily toggle market news entity rather than searching.
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+## What was the most useful feature that was added to the latest version of your chosen language?
+> Error: .cause
+```
+    This can be used to include more intrinsic information to Error when errors.
+```
+example:
+```
+const getNews = async () => {
+    try {
+      const response = await marketaux.get("/news/all");
+      setNews(response.data.data);
+    } catch (error: any) {
+      throw new Error("Something when wrong, please try again later", {
+        cause: error,
+      });
+    }
+  };
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+```
+try{
+  const users = await getNews();
+} catch(error) {
+  console.log(error.cause);
+}
+
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+
+## How would you track down a performance issue in production? Have you ever had to do this?
+
+To track down performance issue in production, at first we have to ensure that logs, metrics and tests are in place to accurately measure the performance of the software as it grows.
+The log gives details about events that was accessed in the application.
+The Metrics helps with the collection of data in time series which can help visualize the performance.
+
+No, I haven't done this.
+
+## How would you improve marketaux that you just used?
+
+- Improve the using of API KEY in the request header instead of passing it as a params to the URL.
+- Increae the limit for free plan, free plan should be able to search for market news with any entity.
+
+## On a scale of 1-10 what would you rate yourself?
+
+```Answer
+    8/10
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+# NOTE
+The Marketaux free plan is limited to 3 items per request and each request has empty entity and similariies which unfortunately can't implement the filter by countries and industries as these are both located inside the entity array.
