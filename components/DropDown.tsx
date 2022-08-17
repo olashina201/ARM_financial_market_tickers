@@ -1,5 +1,5 @@
 import React from "react";
-import { FilterList } from "../data/filterList";
+import { FilterList } from "../data/navList";
 import styles from "./component.styles";
 
 type ToggleProps = {

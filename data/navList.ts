@@ -1,0 +1,1 @@
+export const NavList = ['Contact', 'About US', 'FAQ', 'Terms']

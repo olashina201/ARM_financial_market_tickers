@@ -1,1 +1,0 @@
-export const FilterList = ['exchanges', 'symbols', 'entity_types', 'industries', 'countries', 'sentiment_gte', 'sentiment_lte']

@@ -1,7 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { Cards } from "../components/Cards";
 import { marketaux } from "../config/marketaux";
 import HeroSection from "../components/HeroSection";
@@ -13,15 +12,27 @@ const Home: NextPage = () => {
   const [news, setNews] = React.useState([]);
 
   const getNews = async () => {
-    const response = await marketaux.get("/news/all");
-    setNews(response.data.data);
-    console.log(news);
+    try {
+      const response = await marketaux.get("/news/all");
+      setNews(response.data.data);
+    } catch (error: any) {
+      throw new Error("Something when wrong, please try again later", {
+        cause: error,
+      });
+    }
   };
 
   const handleSearchSubmit = async (filter: string) => {
-    const response =  news.filter((data: IResponseData) => data.keywords.includes(filter));
-    setNews(response);
-    console.log('new ', news)
+    try {
+      const response = news.filter((data: IResponseData) =>
+        data.keywords.includes(filter)
+      );
+      setNews(response);
+    } catch (error: any) {
+      throw new Error("Something when wrong, please try again later", {
+        cause: error,
+      });
+    }
   };
 
   React.useEffect(() => {

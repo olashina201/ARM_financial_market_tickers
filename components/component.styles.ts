@@ -10,24 +10,6 @@ const styles = {
 
     /*
     |--------------------------------------------------------------------------
-    | Caption Component
-    |--------------------------------------------------------------------------
-    */
-
-    captionWrapper: `flex flex-col items-center sm:px-5 md:flex-row`,
-    captionImgWrapper: `w-full md:w-1/2`,
-    captionImage: `object-contain w-full h-full rounded-lg max-h-64 sm:max-h-96`,
-    captionContentWrapper: `flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-1/2`,
-    captionContentContainer: `flex flex-col items-start justify-center h-full space-y-3 transform md:pl-10 lg:pl-16 md:space-y-5`,
-    captionFeature: `bg-pink-500 flex items-center pl-2 pr-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block`,
-    captionTitle: `text-4xl font-bold leading-none lg:text-5xl xl:text-6xl`,
-    captionReadNow: `mx-1 text-gray-600`,
-    captionSmallText: `pt-2 text-sm font-medium`,
-    captionAnchor: `mr-1 underline`,
-
-
-    /*
-    |--------------------------------------------------------------------------
     | Card Component
     |--------------------------------------------------------------------------
     */
@@ -75,31 +57,7 @@ const styles = {
 
     /*
     |--------------------------------------------------------------------------
-    | Hero Component
-    |--------------------------------------------------------------------------
-    */
-
-    heroSection: `box-border py-8 leading-7 text-gray-900 bg-white border-0 border-gray-200 border-solid sm:py-12 md:py-16 lg:py-24`,
-    heroWrapper: `box-border max-w-sm px-4 mx-auto border-solid sm:px-6 md:px-6 lg:px-8 md:max-w-7xl`,
-    heroContainer: `flex flex-col items-center space-y-5 leading-7 text-center text-gray-900 border-0 border-gray-200 xl:space-y-4`,
-    heroTitle: `box-border m-0 text-lg font-semibold leading-normal text-gray-900 border-solid md:text-2xl`,
-    heroCaption: `box-border m-0 text-4xl font-extrabold leading-tight tracking-tight text-black border-solid md:text-5xl lg:text-6xl`,
-    heroSpan: `block mt-1 xl:inline xl:mt-0`,
-    heroText: `box-border pb-8 text-sm text-gray-900 border-solid md:text-2xl`,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Navbar Component
-    |--------------------------------------------------------------------------
-    */
-
-    navSection: `w-full px-4 text-white bg-blue-700 body-font fixed`,
-    navWrapper: `container flex flex-col items-center justify-center py-3 mx-auto max-w-7xl md:flex-row`,
-    navAnchor: `flex items-center font-sans text-3xl font-extrabold text-center text-white no-underline bg-transparent cursor-pointer focus:no-underline`,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Hero Section Component
+    | Header Component
     |--------------------------------------------------------------------------
     */
     headerSection: `relative w-full h-auto bg-no-repeat bg-cover`,
@@ -133,6 +91,21 @@ const styles = {
     titleHead: `mb-6 text-5xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-gray-900 sm:text-6xl md:text-6xl lg:text-7xl md:tracking-tight`,
     titleSpan: `w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline`,
     titleBreak: `lg:block hidden`,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Footer Component
+    |--------------------------------------------------------------------------
+    */
+
+    footerSection: `py-10 bg-gray-50`,
+    footerWrapper: `px-10 mx-auto max-w-7xl`,
+    footerLogo: `flex flex-col items-center sm:flex-row sm:justify-between`,
+    footerLogoText: `flex items-center text-lg font-bold`,
+    footerNavWrapper: `flex flex-col justify-between mt-5 mb-5 text-center sm:mb-0 sm:mt-12 sm:flex-row`,
+    footerLists: `flex flex-row justify-center pb-3 -ml-4 -mr-4 text-sm font-bold`,
+    footerList: `px-2 text-gray-500 hover:text-gray-600`,
+    footerCopyright: `mt-3 text-xs leading-tight text-gray-500 sm:mt-0`,
 };
 
 export default styles;
